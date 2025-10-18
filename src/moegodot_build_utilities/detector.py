@@ -200,3 +200,7 @@ class SystemInformation:
             subprocess.run(sudo + [brew, "install", switch[PkgMgr.Brew]],check=True)
         elif pacman is not None:
             subprocess.run(sudo + [pacman, "-S", switch[PkgMgr.Pacman]],check=True)
+
+    def enter(self,cwd):
+        py_os.chdir(cwd)
+        py_os.environ = self.environments
