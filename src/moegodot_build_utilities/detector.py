@@ -100,7 +100,7 @@ class SystemInformation:
         self.root_dir = root_dir
 
         os = platform.system()
-        self.Os = detect_os(os)
+        self.os = detect_os(os)
 
         arch = platform.machine()
         self.arch = detect_architect(arch)
