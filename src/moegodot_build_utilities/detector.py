@@ -168,14 +168,15 @@ class SystemInformation:
             
         return program
     
-    def use_tool(self,program:str, *ver_matches: List[str]) -> None:
+    def use_tool(self,program:str, *ver_matches: List[str]) -> str:
         found = self.find_tool(program,*ver_matches)
         log.info(f"Use tool {found}")
         self.add_env_path(path.dirname(found))
+        return found
 
     def add_env_path(self,path:str):
         log.info(f"Add `{path}` to self.environments")
-        self.environments["PATH"] = [path] + self.environments["PATH"].split(self.path_env_separator)
+        self.environments["PATH"] = self.path_env_separator.join([path] + self.environments["PATH"].split(self.path_env_separator))
     
     def clone_repo(self,url:str,to:str,git_args:List[str] = ["--depth=1"]):
         subprocess.run(["git", "clone", url, to] + git_args, check=True, cwd=self.root_dir,env=self.environments)
