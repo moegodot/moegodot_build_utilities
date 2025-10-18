@@ -111,7 +111,7 @@ class SystemInformation:
         self.environments = default_env
 
         log.info(f"Create SystemInformation in {root_dir}")
-        log.info(f"Detect - {self.Os} from platform.system():{os}")
+        log.info(f"Detect - {self.os} from platform.system():{os}")
         log.info(f"Detect - {self.arch} from platform.machine():{arch}")
 
         self.path_env_separator = py_os.pathsep
