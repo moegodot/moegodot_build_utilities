@@ -1,0 +1,36 @@
+[project]
+name = "moegodot-build-utilities"
+version = "0.1.0"
+description = "A toolset that help you construct a brave new world!"
+readme = "README.md"
+authors = [{ name = "Moe godot", email = "me@kawayi.moe" }]
+requires-python = ">=3.14"
+dependencies = [
+    "rich>=14.2.0",
+    "semver>=3.0.4",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: Freeware",
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: C",
+    "Programming Language :: C#",
+    "Programming Language :: C++",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Build Tools",
+    "Topic :: Utilities",
+]
+license = "GPL-3.0-or-later"
+license-files = ["LICENSE"]
+
+[project.urls]
+Homepage = "https://github.com/moegodot/moegodot_build_utilities"
+Issues = "https://github.com/moegodot/moegodot_build_utilities/issues"
+
+[build-system]
+requires = ["uv_build >= 0.9"]
+build-backend = "uv_build"
